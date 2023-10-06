@@ -13,9 +13,9 @@ export const todoSlice = createSlice({
         addTodo: (state, action) => {
             const todo = {
                 id: nanoid(), 
-                text: action.payload
+                text: action.payload   //it will containe all action
             }
-            state.todos.push(todo)
+            state.todos.push(todo)     //it will add todo in inistialstate
         },
         removeTodo: (state, action) => {
             state.todos = state.todos.filter((todo) => todo.id !== action.payload )

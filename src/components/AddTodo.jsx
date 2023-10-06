@@ -8,8 +8,8 @@ function AddTodo() {
     const dispatch = useDispatch()
 
     const addTodoHandler = (e) => {
-        e.preventDefault()
-        dispatch(addTodo(input))
+        e.preventDefault()    //it will stop auto submit form
+        dispatch(addTodo(input))   //send data to store
         setInput('')
     }
 
